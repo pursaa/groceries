@@ -14,6 +14,13 @@ $(document).ready(function(){
       return item.toUpperCase();
     });
     console.log(inputItemsCap);
+    $("form").hide();
+    $(".list").show();
+    inputItemsCap.forEach(function(item){
+      var positions = ["first", "second", "third", "fourth"];
+      positions.forEach(function(position) {
+        $("#" + position).text(item);
+      });
+    });
   });
-
 });
